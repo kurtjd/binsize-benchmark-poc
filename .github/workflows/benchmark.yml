@@ -18,6 +18,8 @@ jobs:
             submodules: true
       - name: Install stable + tools
         uses: dtolnay/rust-toolchain@stable
+        with:
+            components: llvm-tools-preview
       # - run: cargo install flip-link
       - run: cargo install cargo-binutils
 
